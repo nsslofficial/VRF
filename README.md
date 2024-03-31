@@ -74,37 +74,34 @@ cd workspace/carkin_ws
 roscore &
 ```
 After the output stops, press enter and you'll be back to the terminal. 
-4. Modify [setup_env.bash](catkin_ws/setup_env.bash) as explained [here](#setup-environment) for each dataset and then run the following commands:
-Terminal#1 
+4. Modify [setup_env.bash](catkin_ws/setup_env.bash) as explained [here](#setup-environment) for each dataset and then run the following commands: <br> 
+**Terminal#1** 
 ```
 source setup_env.bash
 rosrun fast_gicp infra_3
 ```
-Terminal#2
+**Terminal#2**
 ```
 source setup_env.bash
 rosrun fast_gicp vehicle_ndt_5
 ```
-Terminal#3 
+**Terminal#3**
 ```
 source setup_env.bash
 rosrun fast_gicp vehicle_fusion_5
 ```
-Terminal#4
+**Terminal#4**
 ```
 source setup_env.bash
 rosrun ./vehicle
 ```
-Terminal#5
+**Terminal#5**
 ```
 source setup_env.bash
 rosrun ./infra
 ```
-
-```
-cd /workspace/catkin_ws/
-catkin_make
-```
+5. Now press space to play bag in vehicle bag in terminal#4 and then in terminal#5 to play infrastructure(rsu) bag.
+6. After the bags are stoped, stop process in the first 3  terminals using 'Ctrl+C'.
 
 ## Setup Environment
 
