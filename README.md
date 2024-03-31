@@ -124,7 +124,7 @@ In this section, we will explain how to configure [setup_env.bash](catkin_ws/set
     ```
   
   - **line#15-16:**  <br>
-    Modify these lines according to the name of dataset. For Dataset_1(D1) it will look like this:
+    Modify ```dataset_path``` and ```dataset_name`` lines according to the name of dataset. For Dataset_1(D1) it will look like this:
     ```
     dataset_path="/dataset/Dataset_1"
     dataset_name="D1"
@@ -151,7 +151,7 @@ In this section, we will explain how to configure [setup_env.bash](catkin_ws/set
   dataset_name="D1"
   append="f" # true(t) or false(f)
   ```
-   Change dataset_name (D1-D6) to reflect the dataset for which you are running VRF. 
+   Change ```dataset_name``` (D1-D6) to reflect the dataset for which you are running VRF. 
   
 - ### usc_data_accuracy
   The setup_env.bash file for rit data will look like this:
@@ -161,4 +161,4 @@ In this section, we will explain how to configure [setup_env.bash](catkin_ws/set
   dataset_name="D1"
   append="f" # true(t) or false(f)
   ```
-  Change dataset_name (D1-D5) to reflect the dataset for which you are running VRF. 
+  Change ```dataset_name``` (D1-D5) to reflect the dataset for which you are running VRF. 
