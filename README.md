@@ -118,20 +118,20 @@ In this section, we will explain how to configure [setup_env.bash](catkin_ws/set
 - ### **carla** 
   Modify the file as follow<br>
   
-  - **line#12:** <br>
-  ```
-  rosparam set /data_mode carla
-  ```
+  - **line#12:** 
+    ```
+    rosparam set /data_mode carla
+    ```
   
   - **line#15-16:**  <br>
-  Modify these lines according to the name of dataset. For Dataset_1(D1) it will look like this:
-  ```
-  dataset_path="/dataset/Dataset_1"
-  dataset_name="D1"
-  ```
+    Modify these lines according to the name of dataset. For Dataset_1(D1) it will look like this:
+    ```
+    dataset_path="/dataset/Dataset_1"
+    dataset_name="D1"
+    ```
   
   - **line#17:**  <br>
-  Modify this line according to dataset_name value. <br>
+    Modify this line according to dataset_name value. <br>
   
     - **For D1:**
       ```
