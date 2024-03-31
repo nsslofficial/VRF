@@ -25,7 +25,7 @@ To check if you have pulled the docker, run the following:
 docker images
 ```
 
-This should output all the dockers you have on your machine and it should contain ```alikhalid3110/ros_essentials:latest```. Now, that you have the docker, you can run it on your machine. We have a [script](run_vrf_docker.bash) for this which will let you mount folders (volumes) to the docker as well. It also sets up different parameters so that you can use GUI programs from within the docker. To use this script, you need to do the following. Open the [run_vrf.bash](run_vrf_docker.bash) file and change lines 4 and 5 to reflect paths to where you keep your datasets and codebases. As you can see, I keep datasets in ```/home/ali/dataset/``` and my VRF code in ```/home/ali/workspace/VRF``. After you have made these changes, simply run the script to fire up the docker.
+This should output all the dockers you have on your machine and it should contain ```alikhalid3110/ros_essentials:latest```. Now, that you have the docker, you can run it on your machine. We have a [script](run_vrf_docker.bash) for this which will let you mount folders (volumes) to the docker as well. It also sets up different parameters so that you can use GUI programs from within the docker. To use this script, you need to do the following. Open the [run_vrf_docker.bash](run_vrf_docker.bash) file and change lines 4 and 5 to reflect paths to where you keep your datasets and codebases. As you can see, I keep datasets in ```/home/ali/dataset/``` and my VRF code in ```/home/ali/workspace/VRF``. After you have made these changes, simply run the script to fire up the docker.
 
 ```
 bash run_edge_assist_docker.bash
@@ -60,21 +60,53 @@ catkin_make
 
 ```catkin_make``` is the ROS build tool. It will build all tools in ```catkin_ws/src```.
 
-## RUN instructions
+## RUN Instructions
 This section explains how to run the code and reproduce results mentioned in Table#3 and Table#9 in the paper. 
 
-1. Open five teminals and run docker in all of them as explained in [docker setup](#docker-setup)
+1. Download the three datasets (carla, usc_data_accuracy, rit_data_accuracy) from this [link](todo), unzip them, and place in the dataset directory that you have mounted with docker container. 
+2. Open five teminals and run docker in all of them as explained in [docker setup](#docker-setup). After that run the following command in all the terminals:
+```
+cd workspace/carkin_ws
+```
+4. Run the ROS master. To do this, run the following command in any of the terminal:
 
 ```
 roscore &
 ```
-
-2. After the output stops, press enter and you'll be back to the terminal. With that, we can now build all the tools mentioned above as.
+After the output stops, press enter and you'll be back to the terminal. 
+4. Modify [setup_env.bash](catkin_ws/setup_env.bash) as explained [here](#setup-environment) for each dataset and then run the following commands:
+Terminal#1 
+```
+source setup_env.bash
+rosrun fast_gicp infra_3
+```
+Terminal#2
+```
+source setup_env.bash
+rosrun fast_gicp vehicle_ndt_5
+```
+Terminal#3 
+```
+source setup_env.bash
+rosrun fast_gicp vehicle_fusion_5
+```
+Terminal#4
+```
+source setup_env.bash
+rosrun ./vehicle
+```
+Terminal#5
+```
+source setup_env.bash
+rosrun ./infra
+```
 
 ```
 cd /workspace/catkin_ws/
 catkin_make
 ```
+
+## Setup Environment
 
 ```catkin_make``` is the ROS build tool. It will build all tools in ```catkin_ws/src```.
 
