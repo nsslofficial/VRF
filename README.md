@@ -1,21 +1,12 @@
-# Edge-assisted Autonomous Driving (EAAD)
+# VRF: Vehicle Road-side Point Cloud Fusion
 
 # Table of Contents
 - [Environment Setup](#environment-setup)
-- [Code Overview](#code-overview)
 - [Build Instructions](#build-instructions)
-- [Recipes](#recipes)
-    - [PCD Playback](#pcd-playback)
-    - [PCD Stitching](#pcd-stitching)
-    - [Raw PCDS and IMU to Rosbag](#raw-point-clouds-pcds-and-imu-csv-to-a-rosbag)
-    - [Raw Ouster Rosbag to PointCloud2 Rosbag](#raw-ouster-data-to-pointcloud2-rosbag)
-    - [PointCloud2 Rosbag to PCDs](#pointcloud2-rosbag-to-pcds)
-    - [Rewrite Rosbag with Message Header Timestamps](#rewrite-rosbag-with-message-header-timestamps)
-    - [PCD Localization with NDT](#pcd-localization-with-ndt)
-    - [Static PCD Transformation](#static-pcd-transformation)
-    - [RAPID](#rapid)
-    - [Additional Alignment](#additional-alignment)
-- [Troubleshooting](#troubleshooting)
+- [Dataset](#dataset)
+- [Code Overview](#code-overview)
+- [Run Instructions](#run-instructions)
+  
 ## Environment Setup
 For this project, we will use a Docker container to containerize our code.
 
@@ -35,7 +26,7 @@ To check if you have pulled the docker, run the following:
 docker images
 ```
 
-This should output all the dockers you have on your machine and it should contain ```alikhalid3110/ros_essentials:latest```. Now, that you have the docker, you can run it on your machine. We have a [script](run_edge_assist_docker.bash) for this which will let you mount folders (volumes) to the docker as well. It also sets up different parameters so that you can use GUI programs from within the docker. To use this script, you need to do the following. Open the [run_edge_assist_docker.bash](run_edge_assist_docker.bash) file and change lines 4 and 5 to reflect paths to where you keep your datasets and codebases. As you can see, I keep datasets in ```/home/ali/dataset/``` and my edge-assist code in ```/home/ali/workspace/``. After you have made these changes, simply run the script to fire up the docker
+This should output all the dockers you have on your machine and it should contain ```alikhalid3110/ros_essentials:latest```. Now, that you have the docker, you can run it on your machine. We have a [script](run_vrf_docker.bash) for this which will let you mount folders (volumes) to the docker as well. It also sets up different parameters so that you can use GUI programs from within the docker. To use this script, you need to do the following. Open the [run_vrf.bash](run_vrf_docker.bash) file and change lines 4 and 5 to reflect paths to where you keep your datasets and codebases. As you can see, I keep datasets in ```/home/ali/dataset/``` and my VRF code in ```/home/ali/workspace/VRF``. After you have made these changes, simply run the script to fire up the docker.
 
 ```
 bash run_edge_assist_docker.bash
@@ -44,12 +35,50 @@ bash run_edge_assist_docker.bash
 This will fire up the docker and you can interact with it using the current terminal window. If you want to attach another terminal to it, open a new terminal and type the following
 
 ```
-docker exec -it alikhalid3110/ros_essentials:latest
+docker exec -it vrf bash
 ```
 
 This will open another terminal within the same docker.
 
 If you are curious about the docker, it contains ROS (Robot Operating System), PCL (Point Cloud Library), ColMap and some of their dependencies.
+
+
+## Build Instructions
+This section explains how you can build the code that this repository contains. Again, the assumption is that you are running the ```alikhalid3110/ros_essentials:latest``` docker when you run the following commands. This repository uses the ROS build system (```catkin_make```). To build all the above modules, simply do the following.
+
+1. First, run the ROS master. To do this, run  the following:
+
+```
+roscore &
+```
+
+2. After the output stops, press enter and you'll be back to the terminal. With that, we can now build all the tools mentioned above as.
+
+```
+cd /workspace/catkin_ws/
+catkin_make
+```
+
+```catkin_make``` is the ROS build tool. It will build all tools in ```catkin_ws/src```.
+
+## RUN instructions
+This section explains how to run the code and reproduce results mentioned in Table#3 and Table#9 in the paper. 
+
+1. Open five teminals and run docker in all of them as explained in [docker setup](#docker_setup)
+
+```
+roscore &
+```
+
+2. After the output stops, press enter and you'll be back to the terminal. With that, we can now build all the tools mentioned above as.
+
+```
+cd /workspace/catkin_ws/
+catkin_make
+```
+
+```catkin_make``` is the ROS build tool. It will build all tools in ```catkin_ws/src```.
+
 
 ## Code Overview
 This section explains how you can run the code that this repository contains. Again, the assumption is that you are running the ```alikhalid3110/ros_essentials:latest``` docker when you run the following commands.
@@ -66,35 +95,6 @@ This repository contains multiple tools that you will need to work with 3D LiDAR
 4. ```catkin_ws/src/ndt_omp``` contains code to localize a pcd in a 3D map. In this project, we use it to localize a vehicle's pcd in a 3D map.
 
 5. ```catkin_ws/src/fast_gicp``` contains the code for RAPID. 
-
-## Build instructions
-This repository uses the ROS build system (```catkin_make```). To build all the above modules, simply do the following.
-
-1. First, run the ROS master. To do this, run  the following:
-
-```
-roscore &
-```
-
-2. After the output stops, press enter and you'll be back to the terminal. With that, we can now build all the tools mentioned above as.
-
-```
-cd catkin_ws/
-catkin_make
-```
-
-```catkin_make``` is the ROS build tool. It will build all tools in ```catkin_ws/src```.
-
-*Note:* The build can sometimes fail because of dependency issues with ```perception_pcl```. I found a hack that works very well. For this, simply move ```perception_pcl``` out of the ```src``` folder, run ```catkin_make```. Then, ```source``` the ```devel/setup.bash``` file, and move ```perception_pcl``` back to ```src``` and repeat.  The commands are as follows.
-
-```
-mv src/perception_pcl .
-catkin_make
-source devel/setup.bash
-mv perception_pcl/ src/
-catkin_make
-source devel/setup.bash
-```
 
 ## Recipes
 ### PCD Playback
