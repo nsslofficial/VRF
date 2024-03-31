@@ -115,22 +115,22 @@ rosrun ./infra
 
 ## Setup Environment
 In this section, we will explain how to configure [setup_env.bash](catkin_ws/setup_env.bash) for different datasets. You have to modify lines 12-17 for each dataset before running VRF.
-### **carla** 
+1. ### **carla** 
 Modify the file as follow<br>
 
-1. **line#12:** <br>
+a. **line#12:** <br>
 ```
 rosparam set /data_mode carla
 ```
 
-2. **line#15-16:**  <br>
+b. **line#15-16:**  <br>
 Modify these lines according to the name of dataset. For Dataset_1(D1) it will look like this:
 ```
 dataset_path="/dataset/Dataset_1"
 dataset_name="D1"
 ```
 
-3. **line#17:**  <br>
+c. **line#17:**  <br>
 Modify this line according to dataset_name value. <br>
 
 **For D1:**
