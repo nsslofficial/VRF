@@ -1,0 +1,2 @@
+fast_gicp
+-DCATKIN_DEVEL_PREFIX=/workspace/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/workspace/catkin_ws/install -G Unix Makefiles
