@@ -64,9 +64,9 @@ catkin_make
 Download the three datasets (carla, usc_data_accuracy, rit_data_accuracy) from this [link](todo), unzip them, and place in the dataset directory that you have mounted with docker container. A brief descriptoin of datasets is provided below:
 1.**carla:** <br>
 This dataset consist of three different datasets (Dataset_1, Dataset_2,Dataset_3), collected in varying traffic conditions. Each dataset further consists of five datasets (D1-D5).
-2. **usc_data_accuracy** <br>
+2.**usc_data_accuracy** <br>
 This dataset is refered in the paper as off-campus dataset and consist of five datasets (D1-D5).
-3. **rit_data_accurcay** <br>
+3.**rit_data_accurcay** <br>
 This dataset is refered in the paper as on-campus dataset and consist of six datasets (D1-D5).
 
 ## RUN Instructions
