@@ -65,9 +65,9 @@ Download the three datasets (carla, usc_data_accuracy, rit_data_accuracy) from t
 1. **carla:** <br>
 This dataset consist of three different datasets (Dataset_1, Dataset_2,Dataset_3), collected in varying traffic conditions. Each dataset further consists of five datasets (D1-D5).
 2. **usc_data_accuracy** <br>
-This dataset is refered in the paper as off-campus dataset and consist of five datasets (D1-D5).
+This dataset is refered in the paper as off-campus dataset and is a collection of five datasets (D1-D5).
 3. **rit_data_accurcay** <br>
-This dataset is refered in the paper as on-campus dataset and consist of six datasets (D1-D5).
+This dataset is refered in the paper as on-campus dataset and is a collection of six datasets (D1-D6).
 
 ## RUN Instructions
 This section explains how to run the code and reproduce accuracy results mentioned in Table#3 and Table#9 in the paper. 
@@ -111,10 +111,39 @@ rosrun ./infra
 ```
 5. Now press space to play bag in vehicle bag in terminal#4 and then in terminal#5 to play infrastructure(rsu) bag.
 6. After the bags are stoped, stop process in the first 3  terminals using 'Ctrl+C'.
+7. Update setup_env.bash and repeat the process for next dataset. 
 
 ## Setup Environment
+In this section, we will explain how to configure [setup_env.bash](catkin_ws/setup_env.bash) for different datasets. You have to modify lines 12-17 for each dataset before running VRF.
+1. **carla** <br>
+Modify the file as follow<br>
 
-```catkin_make``` is the ROS build tool. It will build all tools in ```catkin_ws/src```.
+**line#12:** <br>
+```
+rosparam set /data_mode carla
+```
+
+**line#15-16:**  <br>
+Modify these lines according to the name of dataset. For Dataset_1(D1) it will look like this:
+```
+dataset_path="/dataset/Dataset_1"
+dataset_name="D1"
+```
+
+**line#17:**  <br>
+Modify this line according to dataset_name value. 
+**For D1:**
+```
+append="f" # true(t) or false(f)
+```
+**For D2-D5:**
+```
+append="t" # true(t) or false(f)
+```
+
+For each dataset in carla, you have to run vrf in order. For examle run vrf for D1 first, then D2, and so on to D5. 
+
+
 
 
 ## Code Overview
