@@ -116,33 +116,34 @@ rosrun ./infra
 ## Setup Environment
 In this section, we will explain how to configure [setup_env.bash](catkin_ws/setup_env.bash) for different datasets. You have to modify lines 12-17 for each dataset before running VRF.
 1. ### **carla** 
-Modify the file as follow<br>
-
-a. **line#12:** <br>
-```
-rosparam set /data_mode carla
-```
-
-b. **line#15-16:**  <br>
-Modify these lines according to the name of dataset. For Dataset_1(D1) it will look like this:
-```
-dataset_path="/dataset/Dataset_1"
-dataset_name="D1"
-```
-
-c. **line#17:**  <br>
-Modify this line according to dataset_name value. <br>
-
-**For D1:**
-```
-append="f" # true(t) or false(f)
-```
-**For D2-D5:**
-```
-append="t" # true(t) or false(f)
-```
-#### Note
-For each dataset in carla, you have to run vrf in order. For examle run vrf for D1 first, then D2, and so on to D5. 
+  Modify the file as follow<br>
+  
+  a. **line#12:** <br>
+  ```
+  rosparam set /data_mode carla
+  ```
+  
+  b. **line#15-16:**  <br>
+  Modify these lines according to the name of dataset. For Dataset_1(D1) it will look like this:
+  ```
+  dataset_path="/dataset/Dataset_1"
+  dataset_name="D1"
+  ```
+  
+  c. **line#17:**  <br>
+  Modify this line according to dataset_name value. <br>
+  
+  **For D1:**
+  ```
+  append="f" # true(t) or false(f)
+  ```
+  **For D2-D5:**
+  ```
+  append="t" # true(t) or false(f)
+  ```
+  #### Note
+  For each dataset in carla, you have to run vrf in order. For examle run vrf for D1 first, then D2, and so on to D5. 
+2. ### rit_data_accuracy
 
 
 
