@@ -134,13 +134,13 @@ In this section, we will explain how to configure [setup_env.bash](catkin_ws/set
   Modify this line according to dataset_name value. <br>
   
     - **For D1:**
-  ```
-  append="f" # true(t) or false(f)
-  ```
+      ```
+      append="f" # true(t) or false(f)
+      ```
     - **For D2-D5:**
-  ```
-  append="t" # true(t) or false(f)
-  ```
+      ```
+      append="t" # true(t) or false(f)
+      ```
   #### Note
   For each dataset in carla, you have to run vrf in order. For examle run vrf for D1 first, then D2, and so on to D5. 
 2. ### rit_data_accuracy
