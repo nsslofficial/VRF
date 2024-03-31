@@ -4,7 +4,6 @@
 - [Environment Setup](#environment-setup)
 - [Build Instructions](#build-instructions)
 - [Dataset](#dataset)
-- [Code Overview](#code-overview)
 - [Run Instructions](#run-instructions)
   
 ## Environment Setup
@@ -64,7 +63,7 @@ catkin_make
 ## RUN instructions
 This section explains how to run the code and reproduce results mentioned in Table#3 and Table#9 in the paper. 
 
-1. Open five teminals and run docker in all of them as explained in [docker setup](#docker_setup)
+1. Open five teminals and run docker in all of them as explained in [docker setup](#docker-setup)
 
 ```
 roscore &
