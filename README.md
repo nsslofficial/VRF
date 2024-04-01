@@ -1,12 +1,12 @@
 # VRF: Vehicle Road-side Point Cloud Fusion
 
 # Table of Contents
-- [Environment Setup](#environment-setup)
+- [Setup](#setup)
 - [Build Instructions](#build-instructions)
 - [Dataset](#dataset)
 - [Run Instructions](#run-instructions)
   
-## Environment Setup
+## Setup
 For this project, we will use a Docker container to containerize our code.
 
 ### Pre-requisties
@@ -111,7 +111,20 @@ rosrun ./infra
 ```
 5. Now press space to play bag in vehicle bag in terminal#4 and then in terminal#5 to play infrastructure(rsu) bag.
 6. After the bags are stoped, stop process in the first 3  terminals using 'Ctrl+C'.
-7. Update setup_env.bash and repeat the process for next dataset. 
+7. Update setup_env.bash and repeat the process for other dataset.
+8. After you are finished executing the code for all the datasets, run the python scripts (as shown below) to calculate and print the results. The output of each python script is also shown below:
+   ```
+   python3 carla_results.py
+   ```
+   ![carla results](images/carla.png)
+   ```
+   python3 usc_results.py
+   ```
+   ![usc results](images/usc_results.png)
+   ```
+   python3 rit_results.py 
+   ```
+   ![rit results](images/rit_results.png)
 
 ## Setup Environment
 In this section, we will explain how to configure [setup_env.bash](catkin_ws/setup_env.bash) for different datasets. You have to modify lines 12-17 for each dataset before running VRF.
