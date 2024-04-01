@@ -116,7 +116,7 @@ rosrun ./infra
    ```
    python3 carla_results.py
    ```
-   ![carla results](images/carla.png)
+   ![carla results](images/carla_results.png)
    ```
    python3 usc_results.py
    ```
