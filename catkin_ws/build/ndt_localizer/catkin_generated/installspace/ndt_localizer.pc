@@ -1,8 +1,0 @@
-prefix=/workspace/catkin_ws/install
-
-Name: ndt_localizer
-Description: Description of ndt_localizer
-Version: 1.7.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: roscpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs sensor_msgs nav_msgs diagnostic_msgs pcl_conversions pcl_ros message_generation

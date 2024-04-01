@@ -1,8 +1,0 @@
-prefix=/workspace/catkin_ws/devel
-
-Name: hdl_localization
-Description: Description of hdl_localization
-Version: 0.0.0
-Cflags: -I/workspace/catkin_ws/devel/include -I/workspace/catkin_ws/src/hdl_localization/include
-Libs: -L${prefix}/lib 
-Requires: 

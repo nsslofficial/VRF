@@ -1,10 +1,10 @@
 
 "use strict";
 
-let CompressDiff = require('./CompressDiff.js');
 let Transform = require('./Transform.js');
+let CompressDiff = require('./CompressDiff.js');
 
 module.exports = {
-  CompressDiff: CompressDiff,
   Transform: Transform,
+  CompressDiff: CompressDiff,
 };

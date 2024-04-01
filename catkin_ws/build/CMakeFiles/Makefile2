@@ -65,11 +65,11 @@ preinstall: fast_gicp/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/tests.dir/clean
-clean: CMakeFiles/clean_test_results.dir/clean
-clean: CMakeFiles/download_extra_data.dir/clean
 clean: CMakeFiles/doxygen.dir/clean
 clean: CMakeFiles/run_tests.dir/clean
+clean: CMakeFiles/clean_test_results.dir/clean
+clean: CMakeFiles/tests.dir/clean
+clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: fast_gicp/clean
 
@@ -212,87 +212,6 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googletest/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/tests.dir
-
-# All Build rule for target.
-CMakeFiles/tests.dir/all:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/catkin_ws/build/CMakeFiles --progress-num= "Built target tests"
-.PHONY : CMakeFiles/tests.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
-.PHONY : CMakeFiles/tests.dir/rule
-
-# Convenience name for target.
-tests: CMakeFiles/tests.dir/rule
-
-.PHONY : tests
-
-# clean rule for target.
-CMakeFiles/tests.dir/clean:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
-.PHONY : CMakeFiles/tests.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/clean_test_results.dir
-
-# All Build rule for target.
-CMakeFiles/clean_test_results.dir/all:
-	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
-	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/catkin_ws/build/CMakeFiles --progress-num= "Built target clean_test_results"
-.PHONY : CMakeFiles/clean_test_results.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
-.PHONY : CMakeFiles/clean_test_results.dir/rule
-
-# Convenience name for target.
-clean_test_results: CMakeFiles/clean_test_results.dir/rule
-
-.PHONY : clean_test_results
-
-# clean rule for target.
-CMakeFiles/clean_test_results.dir/clean:
-	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/clean
-.PHONY : CMakeFiles/clean_test_results.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/download_extra_data.dir
-
-# All Build rule for target.
-CMakeFiles/download_extra_data.dir/all:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/catkin_ws/build/CMakeFiles --progress-num= "Built target download_extra_data"
-.PHONY : CMakeFiles/download_extra_data.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
-.PHONY : CMakeFiles/download_extra_data.dir/rule
-
-# Convenience name for target.
-download_extra_data: CMakeFiles/download_extra_data.dir/rule
-
-.PHONY : download_extra_data
-
-# clean rule for target.
-CMakeFiles/download_extra_data.dir/clean:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/clean
-.PHONY : CMakeFiles/download_extra_data.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
 
 # All Build rule for target.
@@ -345,6 +264,87 @@ run_tests: CMakeFiles/run_tests.dir/rule
 CMakeFiles/run_tests.dir/clean:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/clean
 .PHONY : CMakeFiles/run_tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/clean_test_results.dir
+
+# All Build rule for target.
+CMakeFiles/clean_test_results.dir/all:
+	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
+	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/catkin_ws/build/CMakeFiles --progress-num= "Built target clean_test_results"
+.PHONY : CMakeFiles/clean_test_results.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
+.PHONY : CMakeFiles/clean_test_results.dir/rule
+
+# Convenience name for target.
+clean_test_results: CMakeFiles/clean_test_results.dir/rule
+
+.PHONY : clean_test_results
+
+# clean rule for target.
+CMakeFiles/clean_test_results.dir/clean:
+	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/clean
+.PHONY : CMakeFiles/clean_test_results.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tests.dir
+
+# All Build rule for target.
+CMakeFiles/tests.dir/all:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/catkin_ws/build/CMakeFiles --progress-num= "Built target tests"
+.PHONY : CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
+.PHONY : CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: CMakeFiles/tests.dir/rule
+
+.PHONY : tests
+
+# clean rule for target.
+CMakeFiles/tests.dir/clean:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
+.PHONY : CMakeFiles/tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/download_extra_data.dir
+
+# All Build rule for target.
+CMakeFiles/download_extra_data.dir/all:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspace/catkin_ws/build/CMakeFiles --progress-num= "Built target download_extra_data"
+.PHONY : CMakeFiles/download_extra_data.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/catkin_ws/build/CMakeFiles 0
+.PHONY : CMakeFiles/download_extra_data.dir/rule
+
+# Convenience name for target.
+download_extra_data: CMakeFiles/download_extra_data.dir/rule
+
+.PHONY : download_extra_data
+
+# clean rule for target.
+CMakeFiles/download_extra_data.dir/clean:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/clean
+.PHONY : CMakeFiles/download_extra_data.dir/clean
 
 #=============================================================================
 # Target rules for target gtest/googlemock/CMakeFiles/gmock_main.dir

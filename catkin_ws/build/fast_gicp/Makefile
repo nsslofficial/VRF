@@ -101,28 +101,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /workspace/catkin_ws/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /workspace/catkin_ws/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /workspace/catkin_ws/build && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -1388,7 +1366,6 @@ help:
 	@echo "... infra_3"
 	@echo "... fast_gicp"
 	@echo "... fast_gicp_generate_messages_py"
-	@echo "... package_source"
 	@echo "... fast_gicp_gennodejs"
 	@echo "... fast_gicp_generate_messages_nodejs"
 	@echo "... fast_gicp_generate_messages_lisp"
@@ -1404,7 +1381,6 @@ help:
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... package"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... test"
