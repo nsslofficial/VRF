@@ -89,19 +89,19 @@ After the output stops, press enter and you'll be back to the terminal.
 source setup_env.bash
 rosrun fast_gicp infra_3
 ```
-After runing the above two commands wait until you say `Going into ros::spin() ...`
+After runing the above two commands wait until you say `Going into ros::spin() ...` <br>
 **Terminal#2**
 ```
 source setup_env.bash
 rosrun fast_gicp vehicle_ndt_5
 ```
-After runing the above two commands wait until you say `Going into ros::spin() ...`
+After runing the above two commands wait until you say `Going into ros::spin() ...` <br>
 **Terminal#3**
 ```
 source setup_env.bash
 rosrun fast_gicp vehicle_fusion_5
 ```
-After runing the above two commands wait until you say `Going into ros::spin() ...`
+After runing the above two commands wait until you say `Going into ros::spin() ...`<br>
 **Terminal#4**
 ```
 source setup_env.bash

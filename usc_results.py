@@ -86,7 +86,7 @@ accuracy_df = accuracy_df.reset_index(drop=True)
 
 
 print('---------------------------------------------')
-print('-------- Table 3 Off-Campus acuracy --------- ')
+print('------- Table 3 Off-Campus accuracy -------- ')
 print('---------------------------------------------')
 print(accuracy_df.shape)
 print(f"{'RTE(cm)':<10}{'':<10}{'':<10} | {'RRE(degree)':<10}{'':<10} {'':<10}")

@@ -79,7 +79,7 @@ accuracy_df = pd.concat([accuracy_dataset_1, accuracy_dataset_2, accuracy_datase
 
 
 print('---------------------------------------------')
-print('----------- Table 3 Carla acuracy ---------- ')
+print('---------- Table 3 Carla accuracy ---------- ')
 print('---------------------------------------------')
 print(f"{'RTE(cm)':<10}{'':<10}{'':<10} | {'RRE(degree)':<10}{'':<10} {'':<10}")
 print(f"{'mean':<10}{'p95':<10}{'p99':<10} | {'mean':<10}{'p95':<10}{'p99':<10}")
