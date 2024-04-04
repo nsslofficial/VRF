@@ -89,6 +89,7 @@ After the output stops, press enter and you'll be back to the terminal.
 source setup_env.bash
 ```
 5. After sourcing the ```setup_env.bash``, run following commands in the specified terminals: <br>
+
 **Terminal#1** 
 ```
 rosrun fast_gicp infra_3
