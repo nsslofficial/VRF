@@ -5,6 +5,7 @@
 - [Build Instructions](#build-instructions)
 - [Dataset](#dataset)
 - [Run Instructions](#run-instructions)
+- [Setup Environment](#setup-environment)
   
 ## Setup
 For this project, we will use a Docker container to containerize our code.
@@ -114,7 +115,7 @@ rosrun ./infra
 6. Now press space to play vehicle bag in terminal#4 and then in terminal#5 to play infrastructure(rsu) bag.
 7. After the bags are stoped, kill process in the first 3  terminals using 'Ctrl+C'.
 8. Update setup_env.bash and repeat the process for other dataset.
-9. After you are finished executing the code for all the datasets, run the python scripts (as shown below) to calculate and print the results. The output of each python script is also shown below:
+9. After you are finished executing the code for all the datasets, run the python scripts (as shown below) to calculate and print the results. These python scripts are present in the root directory. The output of each python script is also shown below: <br>
    ```
    python3 carla_results.py
    ```
