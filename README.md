@@ -61,7 +61,7 @@ catkin_make
 ```catkin_make``` is the ROS build tool. It will build all tools in ```catkin_ws/src```.
 
 ## Dataset
-Download the three datasets (carla, usc_data_accuracy, rit_data_accuracy) from this [link](https://drive.google.com/drive/folders/1fstbvPEIsZocvqDT081GufHS9PY8pwoH?usp=sharing), unzip them, and place in the dataset directory that you have mounted with docker container. A brief descriptoin of datasets is provided below:
+Download the three datasets (carla, usc_data_accuracy, rit_data_accuracy) from this [link](https://drive.google.com/drive/folders/1fstbvPEIsZocvqDT081GufHS9PY8pwoH?usp=sharing), unzip them, and place in the dataset directory that you have mounted with docker container. The dataset consists of 26 sub-datasets which are grouped into 3 main datasets. A brief descriptoin of datasets is provided below:
 1. **carla:** <br>
 This dataset consist of three different datasets (Dataset_1, Dataset_2,Dataset_3), collected in varying traffic conditions. Each dataset further consists of five datasets (D1-D5).
 2. **usc_data_accuracy** <br>
@@ -77,45 +77,44 @@ This section explains how to run the code and reproduce accuracy results mention
 ```
 cd workspace/carkin_ws
 ```
-4. Run the ROS master. To do this, run the following command in any of the terminal:
+3. Run the ROS master. To do this, run the following command in any of the terminal:
 
 ```
 roscore &
 ```
 After the output stops, press enter and you'll be back to the terminal. 
-4. Modify [setup_env.bash](catkin_ws/setup_env.bash) as explained [here](#setup-environment) for each dataset and then run the following commands: <br> 
+4. Modify [setup_env.bash](catkin_ws/setup_env.bash) as explained [here](#setup-environment) for each dataset and then run the following command in all the five terminals: <br> 
+```
+source setup_env.bash
+```
+5. After sourcing the ```setup_env.bash``, run following commands in the specified terminals: <br>
 **Terminal#1** 
 ```
-source setup_env.bash
 rosrun fast_gicp infra_3
 ```
-After runing the above two commands wait until you say `Going into ros::spin() ...` <br>
+After runing the above command wait until you say `Going into ros::spin() ...` <br>
 **Terminal#2**
 ```
-source setup_env.bash
 rosrun fast_gicp vehicle_ndt_5
 ```
-After runing the above two commands wait until you say `Going into ros::spin() ...` <br>
+After runing the above command wait until you say `Going into ros::spin() ...` <br>
 **Terminal#3**
 ```
-source setup_env.bash
 rosrun fast_gicp vehicle_fusion_5
 ```
-After runing the above two commands wait until you say `Going into ros::spin() ...`<br>
+After runing the above command wait until you say `Going into ros::spin() ...`<br>
 **Terminal#4**
 ```
-source setup_env.bash
 rosrun ./vehicle
 ```
 **Terminal#5**
 ```
-source setup_env.bash
 rosrun ./infra
 ```
-5. Now press space to play bag in vehicle bag in terminal#4 and then in terminal#5 to play infrastructure(rsu) bag.
-6. After the bags are stoped, stop process in the first 3  terminals using 'Ctrl+C'.
-7. Update setup_env.bash and repeat the process for other dataset.
-8. After you are finished executing the code for all the datasets, run the python scripts (as shown below) to calculate and print the results. The output of each python script is also shown below:
+6. Now press space to play vehicle bag in terminal#4 and then in terminal#5 to play infrastructure(rsu) bag.
+7. After the bags are stoped, kill process in the first 3  terminals using 'Ctrl+C'.
+8. Update setup_env.bash and repeat the process for other dataset.
+9. After you are finished executing the code for all the datasets, run the python scripts (as shown below) to calculate and print the results. The output of each python script is also shown below:
    ```
    python3 carla_results.py
    ```
