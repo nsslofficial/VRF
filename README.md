@@ -159,7 +159,7 @@ In this section, we will explain how to configure [setup_env.bash](catkin_ws/set
       append="t" # true(t) or false(f)
       ```
   #### Note
-The Carla dataset consists of three sub-datasets: Dataset 1, Dataset 2, and Dataset 3. Each of these sub-datasets comprises five different datasets (D1 to D5). The results of these smaller datasets (D1 to D5) are concatenated into one file. It is necessary to run the code for these datasets in order (starting with D1, followed by D2, and so on to D5) because the ground truth for these datasets is also concatenated in the same order.
+    The Carla dataset consists of three sub-datasets: Dataset 1, Dataset 2, and Dataset 3. Each of these sub-datasets comprises five different datasets (D1 to D5). The results of these smaller datasets (D1 to D5) are concatenated into one file. It is necessary to run the code for these datasets in order (starting with D1, followed by D2, and so on to D5) because the ground truth for these datasets is also concatenated in the same order.
 
 - ### rit_data_accuracy
   The setup_env.bash file for rit data will look like this:
