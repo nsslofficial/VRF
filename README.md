@@ -182,13 +182,11 @@ In this section, we will explain how to configure [setup_env.bash](catkin_ws/set
   Change ```dataset_name``` (D1-D5) to reflect the dataset for which you are running VRF.
 ## Citation
 ```
-<small>
-@inproceedings{khan2024vrf,<br>
-&nbsp;&nbsp;title={VRF: Vehicle Road-side Point Cloud Fusion},<br>
-&nbsp;&nbsp;author={Khan, Kaleem Nawaz and Khalid, Ali and Turkar, Yash and Dantu, Karthik and Ahmad, Fawad},<br>
-&nbsp;&nbsp;booktitle={Proceedings of the 22nd Annual International Conference on Mobile Systems, Applications and Services},<br>
-&nbsp;&nbsp;pages={547--560},<br>
-&nbsp;&nbsp;year={2024}<br>
+@inproceedings{khan2024vrf,
+  title={VRF: Vehicle Road-side Point Cloud Fusion},
+  author={Khan, Kaleem Nawaz and Khalid, Ali and Turkar, Yash and Dantu, Karthik and Ahmad, Fawad},
+  booktitle={Proceedings of the 22nd Annual International Conference on Mobile Systems, Applications and Services},
+  pages={547--560},
+  year={2024}
 }
-</small>
  ```
