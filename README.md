@@ -179,4 +179,12 @@ In this section, we will explain how to configure [setup_env.bash](catkin_ws/set
   dataset_name="D1"
   append="f" # true(t) or false(f)
   ```
-  Change ```dataset_name``` (D1-D5) to reflect the dataset for which you are running VRF. 
+  Change ```dataset_name``` (D1-D5) to reflect the dataset for which you are running VRF.
+## Citation
+@inproceedings{khan2024vrf,
+  title={VRF: Vehicle Road-side Point Cloud Fusion},
+  author={Khan, Kaleem Nawaz and Khalid, Ali and Turkar, Yash and Dantu, Karthik and Ahmad, Fawad},
+  booktitle={Proceedings of the 22nd Annual International Conference on Mobile Systems, Applications and Services},
+  pages={547--560},
+  year={2024}
+}
