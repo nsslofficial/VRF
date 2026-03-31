@@ -113,60 +113,60 @@ target_include_directories(fast_gicp PUBLIC
 ### APPS ###
 if(BUILD_apps)
   
-  add_executable(vehicle_fusion_1 src/vehicle_fusion_1.cpp)
-  add_dependencies(vehicle_fusion_1 fast_gicp)
-  target_link_libraries(vehicle_fusion_1
+  add_executable(vehicle_fusion_pipeline_1 src/vehicle_fusion_pipeline_1.cpp)
+  add_dependencies(vehicle_fusion_pipeline_1 fast_gicp)
+  target_link_libraries(vehicle_fusion_pipeline_1
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp
   )
 
 
-  add_executable(vehicle_fusion_2 src/vehicle_fusion_2.cpp)
-  add_dependencies(vehicle_fusion_2 fast_gicp)
-  target_link_libraries(vehicle_fusion_2
+  add_executable(vehicle_fusion_pipeline_2 src/vehicle_fusion_pipeline_2.cpp)
+  add_dependencies(vehicle_fusion_pipeline_2 fast_gicp)
+  target_link_libraries(vehicle_fusion_pipeline_2
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp
   )
 
-  add_executable(vehicle_fusion_3 src/vehicle_fusion_3.cpp)
-  add_dependencies(vehicle_fusion_3 fast_gicp)
-  target_link_libraries(vehicle_fusion_3
+  add_executable(vehicle_fusion_pipeline_3 src/vehicle_fusion_pipeline_3.cpp)
+  add_dependencies(vehicle_fusion_pipeline_3 fast_gicp)
+  target_link_libraries(vehicle_fusion_pipeline_3
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp
   )
 
-  add_executable(vehicle_fusion_4 src/vehicle_fusion_4.cpp)
-  add_dependencies(vehicle_fusion_4 fast_gicp)
-  target_link_libraries(vehicle_fusion_4
+  add_executable(vehicle_fusion_pipeline_4 src/vehicle_fusion_pipeline_4.cpp)
+  add_dependencies(vehicle_fusion_pipeline_4 fast_gicp)
+  target_link_libraries(vehicle_fusion_pipeline_4
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp
   )
 
-  add_executable(vehicle_fusion_5 src/vehicle_fusion_5.cpp)
-  add_dependencies(vehicle_fusion_5 fast_gicp)
-  target_link_libraries(vehicle_fusion_5
-    ${PCL_LIBRARIES}
-    ${catkin_LIBRARIES}
-    fast_gicp
-  )
-
-
-  add_executable(vehicle_ndt_1 src/vehicle_ndt_1.cpp)
-  add_dependencies(vehicle_ndt_1 fast_gicp)
-  target_link_libraries(vehicle_ndt_1
+  add_executable(vehicle_fusion_pipeline_5 src/vehicle_fusion_pipeline_5.cpp)
+  add_dependencies(vehicle_fusion_pipeline_5 fast_gicp)
+  target_link_libraries(vehicle_fusion_pipeline_5
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp
   )
 
 
-  add_executable(vehicle_ndt_5 src/vehicle_ndt_5.cpp)
-  add_dependencies(vehicle_ndt_5 fast_gicp)
-  target_link_libraries(vehicle_ndt_5
+  add_executable(vehicle_ndt_pipeline_1 src/vehicle_ndt_pipeline_1.cpp)
+  add_dependencies(vehicle_ndt_pipeline_1 fast_gicp)
+  target_link_libraries(vehicle_ndt_pipeline_1
+    ${PCL_LIBRARIES}
+    ${catkin_LIBRARIES}
+    fast_gicp
+  )
+
+
+  add_executable(vehicle_ndt_pipeline_5 src/vehicle_ndt_pipeline_5.cpp)
+  add_dependencies(vehicle_ndt_pipeline_5 fast_gicp)
+  target_link_libraries(vehicle_ndt_pipeline_5
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp
@@ -174,27 +174,27 @@ if(BUILD_apps)
 
 
 
-  add_executable(infra_1 src/infra_1.cpp)
-  add_dependencies(infra_1 fast_gicp)
-  target_link_libraries(infra_1
+  add_executable(infra_pipeline_1 src/infra_pipeline_1.cpp)
+  add_dependencies(infra_pipeline_1 fast_gicp)
+  target_link_libraries(infra_pipeline_1
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp
   )
 
 
-  add_executable(infra_2 src/infra_2.cpp)
-  add_dependencies(infra_2 fast_gicp)
-  target_link_libraries(infra_2
+  add_executable(infra_pipeline_2 src/infra_pipeline_2.cpp)
+  add_dependencies(infra_pipeline_2 fast_gicp)
+  target_link_libraries(infra_pipeline_2
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp
   )
 
 
-  add_executable(infra_3 src/infra_3.cpp)
-  add_dependencies(infra_3 fast_gicp)
-  target_link_libraries(infra_3
+  add_executable(infra_pipeline_3 src/infra_pipeline_3.cpp)
+  add_dependencies(infra_pipeline_3 fast_gicp)
+  target_link_libraries(infra_pipeline_3
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     fast_gicp

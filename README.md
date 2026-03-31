@@ -92,17 +92,17 @@ source setup_env.bash
 
 **Terminal#1** 
 ```
-rosrun fast_gicp infra_3
+rosrun fast_gicp infra_pipeline_3
 ```
 After runing the above command wait until you say `Going into ros::spin() ...` <br>
 **Terminal#2**
 ```
-rosrun fast_gicp vehicle_ndt_5
+rosrun fast_gicp vehicle_ndt_pipeline_5
 ```
 After runing the above command wait until you say `Going into ros::spin() ...` <br>
 **Terminal#3**
 ```
-rosrun fast_gicp vehicle_fusion_5
+rosrun fast_gicp vehicle_fusion_pipeline_5
 ```
 After runing the above command wait until you say `Going into ros::spin() ...`<br>
 **Terminal#4**

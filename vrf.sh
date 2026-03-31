@@ -11,21 +11,21 @@ open_gnome_terminal() {
     docker exec -it vrf bash -c \"
     cd workspace/catkin_ws
     source setup_env.bash
-    rosrun fast_gicp infra_3
+    rosrun fast_gicp infra_pipeline_3
     \"
     $SHELL'" \
     --tab --title="vrf_ndt" -e "bash -c '
     docker exec -it vrf bash -c \"
     cd workspace/catkin_ws
     source setup_env.bash
-    rosrun fast_gicp vehicle_ndt_5
+    rosrun fast_gicp vehicle_ndt_pipeline_5
     \"
     $SHELL'" \
     --tab --title="vrf_fusion" -e "bash -c '
     docker exec -it vrf bash -c \"
     cd workspace/catkin_ws
     source setup_env.bash
-    rosrun fast_gicp vehicle_fusion_5
+    rosrun fast_gicp vehicle_fusion_pipeline_5
     \"
     $SHELL'" \
     --tab --title="vrf_vehicle_bag" -e "bash -c '
