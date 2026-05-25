@@ -1,4 +1,4 @@
-(cl:in-package fast_gicp-msg)
+(cl:in-package VRF-msg)
 (cl:export '(HEADER-VAL
           HEADER
           DATA-VAL

@@ -1,6 +1,6 @@
 // Auto-generated. Do not edit!
 
-// (in-package fast_gicp.msg)
+// (in-package VRF.msg)
 
 
 "use strict";
@@ -67,7 +67,7 @@ class Transform {
 
   static datatype() {
     // Returns string type for a message object
-    return 'fast_gicp/Transform';
+    return 'VRF/Transform';
   }
 
   static md5sum() {

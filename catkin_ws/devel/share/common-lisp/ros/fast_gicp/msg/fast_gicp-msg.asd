@@ -1,7 +1,7 @@
 
 (cl:in-package :asdf)
 
-(defsystem "fast_gicp-msg"
+(defsystem "VRF-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils :std_msgs-msg
 )
   :components ((:file "_package")

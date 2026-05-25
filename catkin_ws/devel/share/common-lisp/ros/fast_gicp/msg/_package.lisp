@@ -1,4 +1,4 @@
-(cl:defpackage fast_gicp-msg
+(cl:defpackage VRF-msg
   (:use )
   (:export
    "<COMPRESSDIFF>"

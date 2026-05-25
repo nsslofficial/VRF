@@ -1,7 +1,7 @@
 ;; Auto-generated. Do not edit!
 
 
-(when (boundp 'fast_gicp::CompressDiff)
+(when (boundp 'VRF::CompressDiff)
   (if (not (find-package "FAST_GICP"))
     (make-package "FAST_GICP"))
   (shadow 'CompressDiff (find-package "FAST_GICP")))
@@ -14,11 +14,11 @@
   (ros::roseus-add-msgs "std_msgs"))
 
 
-(defclass fast_gicp::CompressDiff
+(defclass VRF::CompressDiff
   :super ros::object
   :slots (_header _data ))
 
-(defmethod fast_gicp::CompressDiff
+(defmethod VRF::CompressDiff
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
@@ -66,9 +66,9 @@
    self)
   )
 
-(setf (get fast_gicp::CompressDiff :md5sum-) "c99a9440709e4d4a9716d55b8270d5e7")
-(setf (get fast_gicp::CompressDiff :datatype-) "fast_gicp/CompressDiff")
-(setf (get fast_gicp::CompressDiff :definition-)
+(setf (get VRF::CompressDiff :md5sum-) "c99a9440709e4d4a9716d55b8270d5e7")
+(setf (get VRF::CompressDiff :datatype-) "VRF/CompressDiff")
+(setf (get VRF::CompressDiff :definition-)
       "Header header
 string data
 ================================================================================
@@ -91,6 +91,6 @@ string frame_id
 
 
 
-(provide :fast_gicp/CompressDiff "c99a9440709e4d4a9716d55b8270d5e7")
+(provide :VRF/CompressDiff "c99a9440709e4d4a9716d55b8270d5e7")
 
 

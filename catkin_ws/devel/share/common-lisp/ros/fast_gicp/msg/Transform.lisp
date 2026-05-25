@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package fast_gicp-msg)
+(cl:in-package VRF-msg)
 
 
 ;//! \htmlinclude Transform.msg.html
@@ -25,16 +25,16 @@
 (cl:defmethod cl:initialize-instance :after ((m <Transform>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'Transform)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name fast_gicp-msg:<Transform> is deprecated: use fast_gicp-msg:Transform instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name VRF-msg:<Transform> is deprecated: use VRF-msg:Transform instead.")))
 
 (cl:ensure-generic-function 'header-val :lambda-list '(m))
 (cl:defmethod header-val ((m <Transform>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fast_gicp-msg:header-val is deprecated.  Use fast_gicp-msg:header instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader VRF-msg:header-val is deprecated.  Use VRF-msg:header instead.")
   (header m))
 
 (cl:ensure-generic-function 'data-val :lambda-list '(m))
 (cl:defmethod data-val ((m <Transform>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fast_gicp-msg:data-val is deprecated.  Use fast_gicp-msg:data instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader VRF-msg:data-val is deprecated.  Use VRF-msg:data instead.")
   (data m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Transform>) ostream)
   "Serializes a message object of type '<Transform>"
@@ -80,10 +80,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Transform>)))
   "Returns string type for a message object of type '<Transform>"
-  "fast_gicp/Transform")
+  "VRF/Transform")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'Transform)))
   "Returns string type for a message object of type 'Transform"
-  "fast_gicp/Transform")
+  "VRF/Transform")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Transform>)))
   "Returns md5sum for a message object of type '<Transform>"
   "fb60495edd59d3fcf90e173153ae8a9a")

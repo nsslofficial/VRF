@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package fast_gicp-msg)
+(cl:in-package VRF-msg)
 
 
 ;//! \htmlinclude CompressDiff.msg.html
@@ -25,16 +25,16 @@
 (cl:defmethod cl:initialize-instance :after ((m <CompressDiff>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'CompressDiff)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name fast_gicp-msg:<CompressDiff> is deprecated: use fast_gicp-msg:CompressDiff instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name VRF-msg:<CompressDiff> is deprecated: use VRF-msg:CompressDiff instead.")))
 
 (cl:ensure-generic-function 'header-val :lambda-list '(m))
 (cl:defmethod header-val ((m <CompressDiff>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fast_gicp-msg:header-val is deprecated.  Use fast_gicp-msg:header instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader VRF-msg:header-val is deprecated.  Use VRF-msg:header instead.")
   (header m))
 
 (cl:ensure-generic-function 'data-val :lambda-list '(m))
 (cl:defmethod data-val ((m <CompressDiff>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fast_gicp-msg:data-val is deprecated.  Use fast_gicp-msg:data instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader VRF-msg:data-val is deprecated.  Use VRF-msg:data instead.")
   (data m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <CompressDiff>) ostream)
   "Serializes a message object of type '<CompressDiff>"
@@ -61,10 +61,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<CompressDiff>)))
   "Returns string type for a message object of type '<CompressDiff>"
-  "fast_gicp/CompressDiff")
+  "VRF/CompressDiff")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'CompressDiff)))
   "Returns string type for a message object of type 'CompressDiff"
-  "fast_gicp/CompressDiff")
+  "VRF/CompressDiff")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<CompressDiff>)))
   "Returns md5sum for a message object of type '<CompressDiff>"
   "c99a9440709e4d4a9716d55b8270d5e7")

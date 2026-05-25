@@ -1,7 +1,7 @@
 ;; Auto-generated. Do not edit!
 
 
-(when (boundp 'fast_gicp::Transform)
+(when (boundp 'VRF::Transform)
   (if (not (find-package "FAST_GICP"))
     (make-package "FAST_GICP"))
   (shadow 'Transform (find-package "FAST_GICP")))
@@ -14,11 +14,11 @@
   (ros::roseus-add-msgs "std_msgs"))
 
 
-(defclass fast_gicp::Transform
+(defclass VRF::Transform
   :super ros::object
   :slots (_header _data ))
 
-(defmethod fast_gicp::Transform
+(defmethod VRF::Transform
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
@@ -74,9 +74,9 @@
    self)
   )
 
-(setf (get fast_gicp::Transform :md5sum-) "fb60495edd59d3fcf90e173153ae8a9a")
-(setf (get fast_gicp::Transform :datatype-) "fast_gicp/Transform")
-(setf (get fast_gicp::Transform :definition-)
+(setf (get VRF::Transform :md5sum-) "fb60495edd59d3fcf90e173153ae8a9a")
+(setf (get VRF::Transform :datatype-) "VRF/Transform")
+(setf (get VRF::Transform :definition-)
       "Header header
 float64[] data
 ================================================================================
@@ -99,6 +99,6 @@ string frame_id
 
 
 
-(provide :fast_gicp/Transform "fb60495edd59d3fcf90e173153ae8a9a")
+(provide :VRF/Transform "fb60495edd59d3fcf90e173153ae8a9a")
 
 

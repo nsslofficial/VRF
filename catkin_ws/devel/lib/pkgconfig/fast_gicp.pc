@@ -1,8 +1,8 @@
 prefix=/workspace/catkin_ws/devel
 
-Name: fast_gicp
-Description: Description of fast_gicp
+Name: VRF
+Description: Description of VRF
 Version: 0.0.0
-Cflags: -I/workspace/catkin_ws/devel/include -I/workspace/catkin_ws/src/fast_gicp/include
-Libs: -L${prefix}/lib -lfast_gicp
+Cflags: -I/workspace/catkin_ws/devel/include -I/workspace/catkin_ws/src/VRF/include
+Libs: -L${prefix}/lib -lVRF
 Requires: message_runtime
