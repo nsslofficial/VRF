@@ -102,7 +102,7 @@ rosrun VRF vehicle_localization_node
 After runing the above command wait until you say `Going into ros::spin() ...` <br>
 **Terminal#3**
 ```
-rosrun VRF Fusion_node
+rosrun VRF fusion_node
 ```
 After runing the above command wait until you say `Going into ros::spin() ...`<br>
 **Terminal#4**

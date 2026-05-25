@@ -25,7 +25,7 @@ open_gnome_terminal() {
     docker exec -it vrf bash -c \"
     cd workspace/catkin_ws
     source setup_env.bash
-    rosrun VRF Fusion_node
+    rosrun VRF fusion_node
     \"
     $SHELL'" \
     --tab --title="vrf_vehicle_bag" -e "bash -c '

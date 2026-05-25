@@ -113,42 +113,42 @@ target_include_directories(VRF PUBLIC
 ### APPS ###
 if(BUILD_apps)
   
-  add_executable(Fusion_node_1 src/Fusion_node_1.cpp)
-  add_dependencies(Fusion_node_1 VRF)
-  target_link_libraries(Fusion_node_1
+  add_executable(fusion_node_1 src/fusion_node_1.cpp)
+  add_dependencies(fusion_node_1 VRF)
+  target_link_libraries(fusion_node_1
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     VRF
   )
 
 
-  add_executable(Fusion_node_2 src/Fusion_node_2.cpp)
-  add_dependencies(Fusion_node_2 VRF)
-  target_link_libraries(Fusion_node_2
+  add_executable(fusion_node_2 src/fusion_node_2.cpp)
+  add_dependencies(fusion_node_2 VRF)
+  target_link_libraries(fusion_node_2
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     VRF
   )
 
-  add_executable(Fusion_node_3 src/Fusion_node_3.cpp)
-  add_dependencies(Fusion_node_3 VRF)
-  target_link_libraries(Fusion_node_3
+  add_executable(fusion_node_3 src/fusion_node_3.cpp)
+  add_dependencies(fusion_node_3 VRF)
+  target_link_libraries(fusion_node_3
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     VRF
   )
 
-  add_executable(Fusion_node_4 src/Fusion_node_4.cpp)
-  add_dependencies(Fusion_node_4 VRF)
-  target_link_libraries(Fusion_node_4
+  add_executable(fusion_node_4 src/fusion_node_4.cpp)
+  add_dependencies(fusion_node_4 VRF)
+  target_link_libraries(fusion_node_4
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     VRF
   )
 
-  add_executable(Fusion_node src/Fusion_node.cpp)
-  add_dependencies(Fusion_node VRF)
-  target_link_libraries(Fusion_node
+  add_executable(fusion_node src/fusion_node.cpp)
+  add_dependencies(fusion_node VRF)
+  target_link_libraries(fusion_node
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     VRF
