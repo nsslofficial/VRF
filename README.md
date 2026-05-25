@@ -92,17 +92,17 @@ source setup_env.bash
 
 **Terminal#1** 
 ```
-rosrun VRF infrastructure_node_3
+rosrun VRF infrastructure_node
 ```
 After runing the above command wait until you say `Going into ros::spin() ...` <br>
 **Terminal#2**
 ```
-rosrun VRF vehicle_localization_node_5
+rosrun VRF vehicle_localization_node
 ```
 After runing the above command wait until you say `Going into ros::spin() ...` <br>
 **Terminal#3**
 ```
-rosrun VRF Fusion_node_5
+rosrun VRF Fusion_node
 ```
 After runing the above command wait until you say `Going into ros::spin() ...`<br>
 **Terminal#4**

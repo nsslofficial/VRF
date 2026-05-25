@@ -146,9 +146,9 @@ if(BUILD_apps)
     VRF
   )
 
-  add_executable(Fusion_node_5 src/Fusion_node_5.cpp)
-  add_dependencies(Fusion_node_5 VRF)
-  target_link_libraries(Fusion_node_5
+  add_executable(Fusion_node src/Fusion_node.cpp)
+  add_dependencies(Fusion_node VRF)
+  target_link_libraries(Fusion_node
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     VRF
@@ -164,9 +164,9 @@ if(BUILD_apps)
   )
 
 
-  add_executable(vehicle_localization_node_5 src/vehicle_localization_node_5.cpp)
-  add_dependencies(vehicle_localization_node_5 VRF)
-  target_link_libraries(vehicle_localization_node_5
+  add_executable(vehicle_localization_node src/vehicle_localization_node.cpp)
+  add_dependencies(vehicle_localization_node VRF)
+  target_link_libraries(vehicle_localization_node
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     VRF
@@ -192,9 +192,9 @@ if(BUILD_apps)
   )
 
 
-  add_executable(infrastructure_node_3 src/infrastructure_node_3.cpp)
-  add_dependencies(infrastructure_node_3 VRF)
-  target_link_libraries(infrastructure_node_3
+  add_executable(infrastructure_node src/infrastructure_node.cpp)
+  add_dependencies(infrastructure_node VRF)
+  target_link_libraries(infrastructure_node
     ${PCL_LIBRARIES}
     ${catkin_LIBRARIES}
     VRF
